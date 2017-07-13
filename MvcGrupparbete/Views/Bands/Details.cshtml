@@ -1,0 +1,36 @@
+﻿@model MvcGrupparbete.Models.Band
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bands</title>
+    <link href="~/Style.css" rel="stylesheet" />
+</head>
+<body>
+    <center>
+        <a>Name: </a>@Model.Name <br /><a>Description: </a>@Model.Description
+        <h2>Album</h2>
+        <a>@Model.Album</a>
+
+        <div>
+            @switch (Model.Id)
+            {
+                case 1:
+                    <img style="width:500px" src="http://gaphals.se/wp-content/uploads/2014/03/dsb.jpg" /><br />
+                    <iframe width="0" height="0" src="https://www.youtube.com/embed/IEC7sIfCtKs?autoplay=1" frameborder="0"></iframe>
+                    break;
+                case 2:
+                    <img style="width:500px" src="http://www.cafe.se/wp-content/uploads/2016/03/Kent-Cafe-2007-10-9.jpg" />
+                    <iframe width="0" height="0" src="https://www.youtube.com/embed/EBTn0ZVSU_o?autoplay=1" frameborder="0" allowfullscreen></iframe>
+                    break;
+                case 3:
+                    <img style="width:500px" src="https://www.isundsvall.se/wp-content/uploads/2016/01/Bo-Kaspers-Orkester.jpg" />
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/H4H7NeweZ-g?autoplay=1" frameborder="0" allowfullscreen></iframe>
+                    break;
+            }
+        </div>
+    </center>
+</body>
+</html>

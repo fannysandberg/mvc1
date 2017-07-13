@@ -1,0 +1,20 @@
+﻿@model MvcGrupparbete.Models.Band[]
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bands</title>
+    <link href="~/Style.css" rel="stylesheet" />
+</head>
+<body>
+    <ul>
+        @foreach (var band in Model)
+        {
+            <li><a href="http://localhost:57859/bands/details/@band.Id">@band.Name</a></li>
+        }
+    </ul>
+
+</body>
+</html>
